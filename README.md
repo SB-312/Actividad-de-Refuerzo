@@ -19,6 +19,12 @@ Lo siguiente es entender bajo que logica necesita funcionar el sistema, esto sig
 
 -El ultimo estado (Overflow_tank) depende de tres contactos que a su vez depende de las tres entradas anteriormente mencionadas low_level, optimal_level y overflow.
 
+Por ultimo se diseño la interfaz HMI en codesys las cual cosiste de 4 luces de colores distintos siendo azul la que avisa de que el tanque esta vacio, amarillo la que avisa que el nivel de liquido es bajo, verde la que avisa que el nivel de liquido es optimo y rojo para avisar que el nivel de liquido esta rebasando la capacidad del tanque odsea el estado de overflow, a su vez hay tres palancas que manejan el estado de las tres entradas que posee el sistema (low_level, optimal_level y overflow) para asi representar de manera correcta el sistema
+
+#Imagen del HMI en codesys
+
+<img width="560" height="303" alt="image" src="https://github.com/user-attachments/assets/ac7f5d01-3b56-40a6-bec6-11b5bed4adfb" />
+
 ## ESQUEMAS
 
 #Esquema Ladder (estado empty)
