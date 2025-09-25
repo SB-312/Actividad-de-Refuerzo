@@ -21,27 +21,27 @@ Lo siguiente es entender bajo que logica necesita funcionar el sistema, esto sig
 
 Por ultimo se diseño la interfaz HMI en codesys las cual cosiste de 4 luces de colores distintos siendo azul la que avisa de que el tanque esta vacio, amarillo la que avisa que el nivel de liquido es bajo, verde la que avisa que el nivel de liquido es optimo y rojo para avisar que el nivel de liquido esta rebasando la capacidad del tanque odsea el estado de overflow, a su vez hay tres palancas que manejan el estado de las tres entradas que posee el sistema (low_level, optimal_level y overflow) para asi representar de manera correcta el sistema
 
-# Imagen del HMI en codesys
+### Imagen del HMI en codesys
 
 <img width="560" height="303" alt="image" src="https://github.com/user-attachments/assets/ac7f5d01-3b56-40a6-bec6-11b5bed4adfb" />
 
 ## ESQUEMAS
 
-# Esquema Ladder (estado empty)
+### Esquema Ladder (estado empty)
 
 <img width="558" height="156" alt="image" src="https://github.com/user-attachments/assets/7eacdbf8-6d53-4aa3-90aa-8db0cbf91f0f" />
 
-# Esquema Ladder (estado low level)
+### Esquema Ladder (estado low level)
 
 <img width="568" height="177" alt="image" src="https://github.com/user-attachments/assets/1ee43855-664e-4949-8776-e8e61cc0667e" />
 
-# Esquema Ladder (estado optimal level)
+### Esquema Ladder (estado optimal level)
 
 <img width="563" height="177" alt="image" src="https://github.com/user-attachments/assets/22541d1f-7928-46df-a14d-1dc4338a4fcc" />
 
-# Esquema Ladder (estado overflow)
+### Esquema Ladder (estado overflow)
 
 <img width="542" height="169" alt="image" src="https://github.com/user-attachments/assets/88947a10-db1a-4558-b98a-9e08ed0ce737" />
 
-# Esquema de conexiones fisicas
+### Esquema de conexiones fisicas
 <img width="1169" height="827" alt="Schematic_Control-de-Tanques_2025-09-24" src="https://github.com/user-attachments/assets/f230a304-b695-4c6b-b36d-15f5faae99b0" />
