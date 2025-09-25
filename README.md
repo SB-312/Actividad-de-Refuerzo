@@ -1,8 +1,8 @@
 # Actividad-de-Refuerzo
 Solución de la actividad de refuerzo 2.3
-## Descripcion
+## DESCRIPCIÓN
 Esta actividad consiste en el diseño de un sitema que sea capaz de "medir" el nivel de un tanque de agua por medio de unos contactos que se cierran dependiendo de el nivel de un liquido, toda la actividad desarrollada a continuacion utiliza logica ladder para el diseño de este sistema, se utilizo Codesys para la creacion de una HMI que simula el funcionamiento de el circuito montado en hardware cuyo programa fue creado en OpenPLC con el mismo diagrama ladder que se utilizo en Codesys para el desarrollo de el HMI.
-## Proceso de Diseño
+## PROCESO DE DISEÑO
 Lo primero es entender los estados por los que pasa el sistema y que condiciones se tienen que cumplir para que cambie de estado, en este caso se diseño teniendo en cuenta cuatro posibles estados:
 1- Empty el cual seria la ausencia de liquido.
 2- Low Level el cual seria cuando hay suficiente liquido para que se cierre el primer contacto.
@@ -18,3 +18,20 @@ Lo siguiente es entender bajo que logica necesita funcionar el sistema, esto sig
 -El el tercer estado (Optimal_level_tank) sigue una estructura similar solo que en este caso ambas entradas low_level y optimal_level dependen de contactos abiertos y el ultimo contacto es normalmente cerrado tambien puesto para formar una estructura AND y depende de la entrada overflow mientras esta este en el estado FALSE activara este tercer estado.
 
 -El ultimo estado (Overflow_tank) depende de tres contactos que a su vez depende de las tres entradas anteriormente mencionadas low_level, optimal_level y overflow.
+
+## ESQUEMAS
+
+#Esquema Ladder (estado empty)
+<img width="558" height="156" alt="image" src="https://github.com/user-attachments/assets/7eacdbf8-6d53-4aa3-90aa-8db0cbf91f0f" />
+
+#Esquema Ladder (estado low level)
+<img width="568" height="177" alt="image" src="https://github.com/user-attachments/assets/1ee43855-664e-4949-8776-e8e61cc0667e" />
+
+#Esquema Ladder (estado optimal level)
+<img width="563" height="177" alt="image" src="https://github.com/user-attachments/assets/22541d1f-7928-46df-a14d-1dc4338a4fcc" />
+
+#Esquema Ladder (estado overflow)
+<img width="542" height="169" alt="image" src="https://github.com/user-attachments/assets/88947a10-db1a-4558-b98a-9e08ed0ce737" />
+
+#Esquema de conexiones fisicas
+<img width="1169" height="827" alt="Schematic_Control-de-Tanques_2025-09-24" src="https://github.com/user-attachments/assets/f230a304-b695-4c6b-b36d-15f5faae99b0" />
