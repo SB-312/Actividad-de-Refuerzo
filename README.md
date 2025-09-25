@@ -45,3 +45,22 @@ Por ultimo se diseño la interfaz HMI en codesys las cual cosiste de 4 luces de 
 
 ### Esquema de conexiones fisicas
 <img width="1169" height="827" alt="Schematic_Control-de-Tanques_2025-09-24" src="https://github.com/user-attachments/assets/f230a304-b695-4c6b-b36d-15f5faae99b0" />
+
+## IMPLEMENTACIÓN Y TESTING
+
+Para la implementacion de esta logica ladder en hardware fisico se utilizo OpenPLC, primero se replico el mismo diagrama creado en codesys dentro del software de OpenPLC y luego se conecto fisicamente el circuito el cual consta de:
+- un Esp32
+- 3 switches
+- 4 leds
+- 4 resistencias de 220 ohms
+Para el cableado de estos circuitos se tuvo en cuenta el mapeo fisico que utiliza OpenPLC para determinar que pines seran salidas y entradas digitales, para esta ocacion las direcciones utilizadas para las entradas digitales fueron:
+- %IX0.0 (pin 17)
+- %IX0.1 (pin 18)
+- %IX0.2 (pin 19)
+Mientras que las salidas digitales esta asignadas a las direcciones:
+- %QX0.0 (pin 2)
+- %QX0.1 (pin 4)
+- %QX0.2 (pin 5)
+- %QX0.3 (pin 12)
+Una vez conectado el circuito fisico y asignadas las direcciones en el software de OpenPLC se utilizo la funcion "Transfer program to PLC" dentro del mismo editor, ahi se selecciono el ESP32 Generic [3.3.1] como Board Type y por medio del puerto COM en el cual estaba conectado el Esp32 del circuito fisico al darel al boton "Transfer to PLC" traduce el diagrama ladder y su funcionalidad a un progrma en C que el microcontrolador es capaz de entender, de esta forma si las conexiones son correctas y el diagrama tambien se podra utilizar de la misma forma que el HMI creado en codesys.
+
