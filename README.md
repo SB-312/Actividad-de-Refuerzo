@@ -22,15 +22,19 @@ Lo siguiente es entender bajo que logica necesita funcionar el sistema, esto sig
 ## ESQUEMAS
 
 #Esquema Ladder (estado empty)
+
 <img width="558" height="156" alt="image" src="https://github.com/user-attachments/assets/7eacdbf8-6d53-4aa3-90aa-8db0cbf91f0f" />
 
 #Esquema Ladder (estado low level)
+
 <img width="568" height="177" alt="image" src="https://github.com/user-attachments/assets/1ee43855-664e-4949-8776-e8e61cc0667e" />
 
 #Esquema Ladder (estado optimal level)
+
 <img width="563" height="177" alt="image" src="https://github.com/user-attachments/assets/22541d1f-7928-46df-a14d-1dc4338a4fcc" />
 
 #Esquema Ladder (estado overflow)
+
 <img width="542" height="169" alt="image" src="https://github.com/user-attachments/assets/88947a10-db1a-4558-b98a-9e08ed0ce737" />
 
 #Esquema de conexiones fisicas
